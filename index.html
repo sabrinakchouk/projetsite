@@ -1,125 +1,205 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Le Chef d'Œuvre — Maquette convertie</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Le Chef d'Œuvre — Galerie</title>
+
+    <!-- Google Fonts: Antic Didone (si dispo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css.css" />
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <div class="logo">LE CHEF D'ŒUVRE</div>
-      <nav aria-label="Navigation principale">
-        <a href="#accueil">Accueil</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#apropos">A Propos</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">LE CHEF D'ŒUVRE</div>
+            <nav class="main-nav">
+                <a href="#portfolio">PORTFOLIO</a>
+                <a href="#about">A PROPOS</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-      <section id="accueil" class="hero" aria-labelledby="hero-title">
-        <div>
-          <h1 id="hero-title">LE CHEF D'ŒUVRE</h1>
-          <p class="lead">credibili quodam amore patriae, qui me amor et subvenire olim impendentibus periculisv perculisiv credibili quadam</p>
-          <div style="margin-top:18px">
-            <p class="muted">rdeo, mihi credite, Patres conscripti (id quod vosmet de me existimatis et facitis ipsi) incredibili quodam rdeo, mihi credite...</p>
-          </div>
-        </div>
-
-        <aside class="small-column" aria-labelledby="aside-title">
-          <h3 id="aside-title">Informations</h3>
-          <p>impendentibus periculis<br>maximis cum dimicatio<br>olim impendentibus periculis</p>
-        </aside>
-      </section>
-
-      <section id="portfolio">
-        <h2>PORTFOLIO</h2>
-        <div class="portfolio">
-          <div class="card">Projet 1 — description courte, garder la forme du bloc.</div>
-          <div class="card">Projet 2 — description courte.</div>
-          <div class="card">Projet 3 — description courte.</div>
-          <div class="card">Projet 4 — description courte.</div>
-        </div>
-      </section>
-
-      <section id="apropos">
-        <h2>A PROPOS</h2>
-        <p class="lead">Vous avez un projet artistique en tête ? N'hésitez pas à nous contacter pour discuter de vos idées.</p>
-        <div class="colonne-texte">
-          <p>credibili quodam amore patriae, qui me amor et subvenire olim impendentibus periculisv perculisiv credibili quadam</p>
-          <p>rdeo, mihi credite, Patres conscripti (id quod vosmet de me existimatis et facitis ipsi) incredibili quodam...</p>
-        </div>
-      </section>
-
-      <section id="contact">
-        <h2>CONTACT</h2>
-        <div class="contact-wrap">
-          <form id="contactForm" aria-label="Formulaire de contact">
-            <label for="prenom">Prénom</label>
-            <input id="prenom" name="prenom" type="text" placeholder="Votre Prénom" required>
-
-            <label for="nom">Nom</label>
-            <input id="nom" name="nom" type="text" placeholder="Votre Nom" required>
-
-            <label for="email">Mail</label>
-            <input id="email" name="email" type="email" placeholder="Votre@gmail.com" required>
-
-            <label for="sujet">Sujet</label>
-            <input id="sujet" name="sujet" type="text" placeholder="Sujet de votre message">
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Décrivez votre projet ou votre demande"></textarea>
-
-            <button class="btn" type="submit">Envoyez votre message</button>
-          </form>
-
-          <aside>
-            <div class="infos-contact">
-              <h3>Informations de Contact</h3>
-              <p><strong>Email:</strong> contact@example.com</p>
-              <p><strong>Téléphone:</strong> +33 1 23 45 67 89</p>
-              <p><strong>Adresse:</strong> 123 Rue de la Maquette, Paris</p>
-              <div class="reseaux">
-                <h4>Suivez-nous</h4>
-                <p class="muted">— instagram • behance • linkedin —</p>
-              </div>
+        <!-- HERO / Intro -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <h1>Bienvenue dans notre univers dédié à la sculpture</h1>
+                    <p>
+                        Un lieu où la matière prend vie, où chaque forme raconte une histoire
+                        et où le geste de l'artiste dialogue avec le regard du spectateur.
+                    </p>
+                    <p class="hero-lead">
+                        Notre galerie célèbre la puissance expressive du volume, du mouvement et de la texture.
+                    </p>
+                </div>
+                <div class="hero-image-frame image-frame large-frame">
+                    <span class="placeholder-label">Cadre image — hero (16:9)</span>
+                </div>
             </div>
-          </aside>
-        </div>
-      </section>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2 class="section-title">PORTFOLIO</h2>
+                <p class="section-sub">Une sélection de nos œuvres les plus récentes, explorant différentes techniques
+                    et médiums artistiques.</p>
+
+                <div class="portfolio-grid">
+                    <!-- Chaque item a un cadre d'image respectant la proportion portrait (4:5) -->
+                    <article class="pf-item">
+                        <div class="image-frame portrait-frame">
+                            <span class="placeholder-label">Cadre 1 — 4:5</span>
+                        </div>
+                        <div class="pf-meta">
+                            <h3>Buste de MADAME RECAMIER</h3>
+                            <p class="author">Joseph Chinard</p>
+                        </div>
+                    </article>
+
+                    <article class="pf-item">
+                        <div class="image-frame portrait-frame">
+                            <span class="placeholder-label">Cadre 2 — 4:5</span>
+                        </div>
+                        <div class="pf-meta">
+                            <h3>Vénus de Millo</h3>
+                            <p class="author">Camille Durand</p>
+                        </div>
+                    </article>
+
+                    <article class="pf-item">
+                        <div class="image-frame portrait-frame">
+                            <span class="placeholder-label">Cadre 3 — 4:5</span>
+                        </div>
+                        <div class="pf-meta">
+                            <h3>Buste Appolon du Belvédère</h3>
+                            <p class="author">—</p>
+                        </div>
+                    </article>
+
+                    <article class="pf-item">
+                        <div class="image-frame portrait-frame">
+                            <span class="placeholder-label">Cadre 4 — 4:5</span>
+                        </div>
+                        <div class="pf-meta">
+                            <h3>Grace Antique</h3>
+                            <p class="author">Van Der Wolf</p>
+                        </div>
+                    </article>
+
+                    <article class="pf-item">
+                        <div class="image-frame portrait-frame">
+                            <span class="placeholder-label">Cadre 5 — 4:5</span>
+                        </div>
+                        <div class="pf-meta">
+                            <h3>Contemplation</h3>
+                            <p class="author">Édouard Francesco</p>
+                        </div>
+                    </article>
+
+                    <!-- tu peux dupliquer/ajouter plus d'items -->
+                </div>
+            </div>
+        </section>
+
+        <!-- A PROPOS -->
+        <section id="about" class="about">
+            <div class="container about-grid">
+                <div class="about-text">
+                    <h2>À PROPOS</h2>
+                    <p>
+                        Nous rassemblons des œuvres d'artistes contemporains et émergents, unis par une même
+                        passion : révéler la beauté du monde à travers la pierre, le métal, le bois ou les matériaux
+                        les plus inattendus.
+                    </p>
+                    <p>
+                        Entre tradition et innovation, entre rigueur du travail manuel et liberté de la création,
+                        nous cherchons à offrir une expérience artistique qui touche, surprend et inspire.
+                    </p>
+                </div>
+                <div class="about-image-frame image-frame medium-frame">
+                    <span class="placeholder-label">Cadre image — à propos (3:2)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact">
+            <div class="container contact-grid">
+                <div class="contact-form-wrap">
+                    <h2>CONTACT</h2>
+                    <p>Vous avez un projet artistique en tête ? N'hésitez pas à nous contacter pour discuter de vos
+                        idées.</p>
+
+                    <form id="contactForm" class="contact-form" onsubmit="return handleForm(event)">
+                        <div class="field-row">
+                            <label for="prenom">Prénom</label>
+                            <input id="prenom" name="prenom" type="text" placeholder="Votre Prénom" required>
+                        </div>
+                        <div class="field-row">
+                            <label for="nom">Nom</label>
+                            <input id="nom" name="nom" type="text" placeholder="Votre Nom" required>
+                        </div>
+                        <div class="field-row">
+                            <label for="email">Mail</label>
+                            <input id="email" name="email" type="email" placeholder="Votre@gmail.com" required>
+                        </div>
+                        <div class="field-row">
+                            <label for="sujet">Sujet</label>
+                            <input id="sujet" name="sujet" type="text" placeholder="Sujet de votre message" required>
+                        </div>
+                        <div class="field-row">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5"
+                                placeholder="Décrivez votre projet ou votre demande" required></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn">Envoyez votre message</button>
+                        </div>
+
+                        <p id="formStatus" class="form-status" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <aside class="contact-info">
+                    <h3>Informations de Contact</h3>
+                    <p><strong>Email</strong><br>contact@lechefdoeuvre.example</p>
+                    <p><strong>Téléphone</strong><br>01 42 82 34 55</p>
+                    <p><strong>Adresse</strong><br>25 Boulevard Haussmann, 75009 Paris</p>
+
+                    <h4>Oeuvres en vitrine</h4>
+                    <ul class="mini-list">
+                        <li>Buste de Madame Recamier — Joseph Chinard</li>
+                        <li>Vénus de Millo — Camille Durand</li>
+                        <li>Buste Appolon du Belvédère</li>
+                        <li>Grace Antique — Van Der Wolf</li>
+                        <li>Contemplation — Édouard Francesco</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
     </main>
 
-    <footer>
-      <div class="footer-grid">
-        <div>© <span id="year"></span> LE CHEF D'ŒUVRE</div>
-        <div class="muted">Vous avez un projet artistique en tête ? N'hésitez pas à nous contacter pour discuter de vos idées.</div>
-      </div>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>© <span id="year"></span> Le Chef d'Œuvre</div>
+            <nav class="footer-nav">
+                <a href="#portfolio">PORTFOLIO</a>
+                <a href="#about">A PROPOS</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </div>
     </footer>
-  </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    const menuBtn = document.querySelector('.menu-btn');
-    const nav = document.querySelector('nav');
-    menuBtn.addEventListener('click', ()=>{
-      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
-      menuBtn.setAttribute('aria-expanded', String(!expanded));
-      nav.style.display = expanded ? '' : 'flex';
-      nav.style.flexDirection = expanded ? '' : 'column';
-    });
-
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', e=>{
-      e.preventDefault();
-      alert('Merci — le message a été préparé. (À relier à un backend pour envoi réel.)');
-      form.reset();
-    });
-  </script>
+    <script src="script.js"></script>
 </body>
-</html>
 
+</html>
